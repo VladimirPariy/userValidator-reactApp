@@ -1,17 +1,14 @@
-import React from 'react'
-import Card from "./components/UI/card/Card";
+import React, {useState} from 'react'
 import cl from './App.module.scss'
+import FormForCreatingUser from "./components/formForCreatingUser/FormForCreatingUser";
 
 function App() {
+
+  const [validateUser, setValidateUser] = useState({})
+  console.log(validateUser)
   return (
     <main className={cl.wrapper}>
-      <Card>
-        <label>Имя</label>
-        <input type="text"/>
-        <label>Возраст</label>
-        <input type="text"/>
-        <button>Добавить пользователя в список</button>
-      </Card>
+      <FormForCreatingUser setValidate={setValidateUser}/>
     </main>
   );
 }
