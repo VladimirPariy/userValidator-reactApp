@@ -1,30 +1,11 @@
 import React from 'react';
+import cl from './UserButton.module.scss'
 
-const UserButton = ({children, formObj, setAge, setName, setValidate}) => {
-
-  const clearInput = () => {
-    setAge('')
-    setName('')
-  }
-
-  const handlerSubmitForm = (e) => {
-    e.preventDefault()
-    if (formObj.name.length < 1 || formObj.age.length < 1) {
-      console.log('modal')
-      clearInput()
-      return;
-    }
-    if (+formObj.age < 0) {
-      console.log('error age')
-      clearInput()
-      return;
-    }
-    setValidate(formObj)
-    clearInput()
-  }
-
+const UserButton = ({children, handleSubmit}) => {
   return (
-    <button onClick={handlerSubmitForm} type='submit'>{children}</button>
+    <button type='submit' className={cl.btn} onClick={handleSubmit}>
+      {children}
+    </button>
   );
 };
 

@@ -1,15 +1,16 @@
 import React from 'react';
+import cl from './UserInput.module.scss'
 
-const UserInput = ({children, state, setState}) => {
+const UserInput = ({children, state, setState, type}) => {
 
-  const handlerChangeName = (e) => {
+  const handlerChangeState = (e) => {
     setState(e.target.value)
   }
 
   return (
     <>
-      <label>{children}</label>
-      <input type="text" onChange={handlerChangeName} value={state}/>
+      <label className={cl.label}>{children}</label>
+      <input type={type} onChange={handlerChangeState} value={state} className={cl.input}/>
     </>
   );
 };

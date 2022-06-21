@@ -1,0 +1,6 @@
+.label{
+  @apply text-center text-xl text-sky-900 font-bold opacity-75;
+}
+.input{
+  @apply w-3/4 bg-slate-100 mx-auto p-2 rounded-xl border-gray-300 border-2 my-1;
+}
