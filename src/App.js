@@ -3,7 +3,6 @@ import cl from './App.module.scss'
 import FormForCreatingUser from "./components/formForCreatingUser/FormForCreatingUser";
 import ValidUsersList from "./components/validUsersList/ValidUsersList";
 import Modal from "./components/UI/modal/Modal";
-import UserButton from "./components/UI/button/UserButton";
 
 function App() {
   const [validateUser, setValidateUser] = useState([])
@@ -24,7 +23,7 @@ function App() {
               Возраст должен быть больше 0
             </Modal>
   }
-  console.log(validateUser)
+
   return (
     <main className={cl.wrapper}>
       <FormForCreatingUser setValidate={setValidateUser}

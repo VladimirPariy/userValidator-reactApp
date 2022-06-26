@@ -19,13 +19,11 @@ const FormForCreatingUser = ({setValidate, setIsVisibilityModal, setIsAgeModalVi
     const formObj = {name, age}
     if (formObj.name.trim().length < 1 || formObj.age.length < 1) {
       setIsVisibilityModal(true)
-      clearInput()
       return;
     }
     if (+formObj.age < 1) {
       setIsVisibilityModal(true)
       setIsAgeModalVisibility(true)
-      clearInput()
       return;
     }
     setValidate((prev)=> [formObj, ...prev])

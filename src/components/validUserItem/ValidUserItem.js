@@ -1,5 +1,4 @@
 import React from 'react';
-import Card from "../UI/card/Card";
 import cl from './ValidUserItem.module.scss'
 
 const ValidUserItem = ({usersList}) => {
